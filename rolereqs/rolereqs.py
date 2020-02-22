@@ -246,7 +246,7 @@ class RoleRequests(commands.Cog):
                     await self._auto_post_list(ctx)
 
     async def _get_role_styled(self, ctx, role_obj):
-        return"@{}".format(escape(str(role_obj), mass_mentions=True))
+        return"{}".format(escape(str(role_obj), mass_mentions=True))
 
         show_color = (role_obj.color != discord.Color.default() and role_obj.mentionable)
         show_member_count = await self.config.guild(ctx.guild).show_member_count()
